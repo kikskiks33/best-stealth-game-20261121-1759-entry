@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quiet Stacks — a stealth game</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a1014;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+  }
+  .frame {
+    text-align: center;
+    padding: 12px;
+  }
+  canvas {
+    display: block;
+    width: min(960px, 96vw);
+    height: auto;
+    image-rendering: auto;
+    box-shadow: 0 0 60px rgba(232, 201, 106, 0.08);
+    border: 1px solid #2a3438;
+  }
+  .help {
+    color: #9a9080;
+    font-size: 13px;
+    margin-top: 10px;
+    letter-spacing: 0.02em;
+  }
+  .help b { color: #e8dcc8; font-weight: normal; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <canvas id="game"></canvas>
+    <div class="help">
+      <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> tiptoe &nbsp;·&nbsp;
+      <b>Click / Space</b> toss a pebble &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp;
+      <b>R</b> restart floor &nbsp;·&nbsp; <b>M</b> mute
+    </div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
